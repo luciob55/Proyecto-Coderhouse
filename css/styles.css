@@ -6,57 +6,40 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #CEEDFA;
   color: #333;
+  background-color: #eef9ff;
   line-height: 1.5;
 }
 
-header {
-  background: #fff;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #87B1F5;
-}
-
 header h1 {
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #6388c5;
-  font-weight: bold;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: #73b7df;
 }
 
 main section {
   padding: 40px 20px;
-  text-align: center;
   background: #ffffff;
-  margin: 20px auto;
-  max-width: 1000px;
+  margin-bottom: 30px;
   border-radius: 10px;
 }
 
 h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #222;
 }
 
 #fotoperfil {
-  width: 200px;
-  border-radius: 10px;
-  margin: 20px 0;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
 }
 
-.icon{
+.icon {
   width: 24px;
   height: 24px;
   vertical-align: middle;
@@ -73,69 +56,157 @@ h2 {
   height: 30px;
 }
 
-#opiniones {
-  margin-top: 40px;
-}
-
-#opiniones h2 {
-  margin-bottom: 20px;
-}
-
-.opiniones {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.opiniones article {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
-}
-
-#estrellas {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #f39c12;
-}
-
-
-.sobre-mi h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
 .sobre-mi .contenido {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   align-items: center;
-  margin-bottom: 40px;
 }
 
-
 .sobre-mi .texto {
+  flex: 1 1 300px;
   text-align: left;
   font-style: italic;
 }
 
-.experiencia {
+.experiencia, .capacitaciones {
   margin-bottom: 30px;
-}
-
-.experiencia h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.capacitaciones h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
 }
 
 .capacitaciones ul {
   list-style: disc;
-  margin-left: 20px;
+  padding-left: 20px;
+}
+
+
+.grilla-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tarjeta p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.tarjeta a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.tarjeta a:hover {
+  color: #023e8a;
+}
+
+.servicio {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.servicio h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.servicio ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.servicio li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.servicio p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.contacto-form input,
+.contacto-form textarea,
+.contacto-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contacto-form button {
+  background: #73b7df;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.mt-4{
+  padding-left: 15px;
+  margin-bottom: 30px;
+  
+}
+
+h2.mb-4{
+  padding-left: 15px;
+}
+.contacto-form button:hover {
+  background: #023e8a;
+}
+
+.contacto-redes p {
+  padding: 30px 0 10px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.contacto-mapa iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -151,128 +222,13 @@ footer p {
   font-size: 14px;
 }
 
-.proyectos {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.proyectos h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #222;
-}
-
-.grilla-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.tarjeta {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tarjeta h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.tarjeta p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.tarjeta a {
-    display: inline-block;
-    text-decoration: none;
-    color: #0077b6;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-.tarjeta a:hover {
-    color: #023e8a;
-}
-
-.servicios {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.servicios h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #222;
-}
-
-.servicio {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 40px;
-}
-
-.servicio h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.servicio ul {
-    margin: 15px 0;
-    padding-left: 20px;
-}
-
-.servicio li {
-    margin-bottom: 8px;
-    color: #444;
-}
-
-.servicio p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.contacto-redes p{
-    padding: 30px;
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    color: #444;
-}
-.contacto-form {
-    display: flex;
+@media (max-width: 768px) {
+  .sobre-mi .contenido {
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
-    text-align: left;
-}
+    align-items: center;
+  }
 
-.contacto-mapa {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.contacto-mapa iframe {
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 10px;
+  .tarjeta, .servicio {
+    padding: 20px 15px;
+  }
 }

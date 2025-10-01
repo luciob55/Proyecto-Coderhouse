@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | Lucio Bauducco</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-  <header>
-    <h1>Lucio Bauducco | developer</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./sobre-mi.html">Sobre mi</a></li>
-        <li><a href="./proyectos.html">Proyectos</a></li>
-        <li><a href="./servicios.html">Servicios</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
+<body class="d-flex flex-column min-vh-100">
+  <header class="bg-white border-bottom mb-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
+      <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <h1 class="h5 mb-0">Lucio Bauducco | Developer</h1>
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="./sobre-mi.html" class="nav-link">Sobre mi</a></li>
+        <li class="nav-item"><a href="./proyectos.html" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="./servicios.html" class="nav-link active">Servicios</a></li>
+        <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
+  <main class="flex-fill container py-4">
+    <section class="servicios">
+      <h2 class="text-center mb-5">Servicios</h2>
+      <div class="row g-4">
 
-    <main>
-        <section class="servicios">
-            <h2>Servicios</h2>
-
-            <div class="servicio">
-                <h3><img src="../assets/devicon.png" alt="devicon">desarrollador full-stack</h3>
-                <ul>
-                    <li>Si osculantur puer tuus</li>
-                </ul>
-                <p>Post votum promissa memini cuius adreptione cupis; quem pollicitus est aversione aversi et fuga.Qui autem de re desit libido frustra miseri qui incurrit odium sui obiecti.</p>
-                <ul>
-                    <li>Si osculantur puer tuus</li>
-                </ul>
-                <p>Post votum promissa memini cuius adreptione cupis; quem pollicitus est aversione aversi et fuga.Qui autem de re desit libido frustra miseri qui incurrit odium sui obiecti.</p>
-            </div>
-
-            <div class="servicio">
-                <h3><img src="../assets/designicon.png" alt="desingicon">diseñador ux/ui</h3>
-                <ul>
-                    <li>Si osculantur puer tuus</li>
-                </ul>
-                <p>Post votum promissa memini cuius adreptione cupis; quem pollicitus est aversione aversi et fuga.Qui autem de re desit libido frustra miseri qui incurrit odium sui obiecti.</p>
-                <ul>
-                    <li>Si osculantur puer tuus</li>
-                </ul>
-                <p>Post votum promissa memini cuius adreptione cupis; quem pollicitus est aversione aversi et fuga.Qui autem de re desit libido frustra miseri qui incurrit odium sui obiecti.</p>
-            </div>
-        </section>
-    </main>
-  <footer>
-    <div>
-          <a href="https://www.instagram.com/luciobauducco/"><img src="../assets/instagram.svg" alt="Instagram" class="icon"></a>
-          <a href="https://wa.me/+543493441812"><img src="../assets/whatsapp.svg" alt="WhatsApp" class="icon"></a>
-          <a href="https://www.linkedin.com/in/lucio-bauducco-2686731a8/"><img src="../assets/linkedin.svg" alt="Linkedin" class="icon"></a>
-          <a href="mailto:luciobauducco@gmail.com"><img src="../assets/email.svg" alt="Email" class="icon"></a>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm p-3">
+            <h3 class="mb-3"><img src="../assets/devicon.png" alt="devicon" class="me-2">Desarrollador Full-Stack</h3>
+            <ul>
+              <li>Desarrollo de aplicaciones web completas</li>
+              <li>Mantenimiento y optimización de sistemas existentes</li>
+            </ul>
+            <p>Post votum promissa memini cuius adreptione cupis; quem pollicitus est aversione aversi et fuga...</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm p-3">
+            <h3 class="mb-3"><img src="../assets/designicon.png" alt="designicon" class="me-2">Diseñador UX/UI</h3>
+            <ul>
+              <li>Diseño de interfaces intuitivas</li>
+              <li>Experiencia de usuario centrada en el cliente</li>
+            </ul>
+            <p>Post votum promissa memini cuius adreptione cupis; quem pollicitus est aversione aversi et fuga...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-white border-top py-4 mt-auto text-center">
+    <div class="mb-3">
+      <a href="https://www.instagram.com/luciobauducco/"><img src="../assets/instagram.svg" alt="Instagram" class="icon"></a>
+      <a href="https://wa.me/+543493441812"><img src="../assets/whatsapp.svg" alt="WhatsApp" class="icon"></a>
+      <a href="https://www.linkedin.com/in/lucio-bauducco-2686731a8/"><img src="../assets/linkedin.svg" alt="Linkedin" class="icon"></a>
+      <a href="mailto:luciobauducco@gmail.com"><img src="../assets/email.svg" alt="Email" class="icon"></a>
     </div>
     <p>Email: luciobauducco@gmail.com</p>
     <p>Sunchales, Santa Fe, Argentina</p>
     <p>2025 Lucio Bauducco - Todos los derechos reservados.</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

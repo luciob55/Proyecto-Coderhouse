@@ -3,56 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre mí</title>
+  <title>Sobre mí | Lucio Bauducco</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Lucio Bauducco | developer</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./sobre-mi.html">Sobre mi</a></li>
-        <li><a href="./proyectos.html">Proyectos</a></li>
-        <li><a href="./servicios.html">Servicios</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
+  <header class="bg-white border-bottom mb-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
+      <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <h1 class="h5 mb-0">Lucio Bauducco | Developer</h1>
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="./sobre-mi.html" class="nav-link active">Sobre mi</a></li>
+        <li class="nav-item"><a href="./proyectos.html" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="./servicios.html" class="nav-link">Servicios</a></li>
+        <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
-  <main>
-    <section class="sobre-mi">
-      <h2>SOBRE MI</h2>
-      <div class="contenido">
-         <img src="../assets/fotoPerfil.jpeg" alt="Foto de perfil" width="250" id="fotoperfil">
-        <div class="texto">
-          <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui odio minima obcaecati, voluptatibus dolore nemo eveniet in quod laborum eligendi id fugit similique? Rem, fuga veritatis natus voluptates esse facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, consequatur nam nemo provident laudantium libero architecto, accusamus sequi autem at eligendi porro nostrum fugit natus recusandae commodi rem blanditiis quas.</em></p>
+  <main class="container py-4">
+    <section class="sobre-mi mb-5">
+      <h2 class="text-center mb-4">Sobre mí</h2>
+      <div class="row align-items-center mb-5">
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <img src="../assets/fotoPerfil.jpeg" alt="Foto de perfil" class="img-fluid rounded" id="fotoperfil">
+        </div>
+        <div class="col-md-8">
+          <p class="fst-italic">
+            Hola, soy Lucio Bauducco, desarrollador Full-Stack y diseñador UX/UI. 
+            Me apasiona crear soluciones digitales intuitivas y eficientes, 
+            siempre buscando combinar funcionalidad con un diseño atractivo y amigable.
+          </p>
+          <p class="fst-italic">
+            Mi objetivo es aprender y aplicar nuevas tecnologías para entregar 
+            productos de alta calidad, adaptándome a las necesidades de cada proyecto y cliente.
+          </p>
         </div>
       </div>
-      <div class="experiencia">
-        <h3>Experiencia laboral</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime repellendus libero quisquam perferendis unde hic aliquam cumque! Libero facilis ducimus odio repellat soluta hic provident voluptatibus aperiam sed? Sint, reiciendis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, corporis assumenda placeat quam, dolore neque sit quos suscipit blanditiis sint atque. Numquam soluta, repellendus eveniet magnam molestias magni repudiandae tempora.</p>
+      <div class="experiencia mb-4">
+        <h3 class="mb-3">Experiencia laboral</h3>
+        <p>
+          He trabajado en desarrollo web y diseño de interfaces, participando en proyectos de frontend, backend y UX/UI. 
+          Cada experiencia me permitió mejorar mis habilidades técnicas y de comunicación con clientes y equipos.
+        </p>
       </div>
       <div class="capacitaciones">
-        <h3>Carrera, Cursos y Certificaciones</h3>
+        <h3 class="mb-3">Carrera, cursos y certificaciones</h3>
         <ul>
-          <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti iste eos consectetur harum quo aliquid dolores. Autem error labore fugit atque nostrum iure, eius voluptatem at ducimus architecto. Quam?</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, perspiciatis? Temporibus inventore officia illum distinctio porro vitae quo labore debitis repellendus, vero recusandae dolor aliquam non nihil modi et soluta?</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. In odio ratione ab aliquam dignissimos molestiae minima dolore voluptatem quis placeat! Minus ducimus, voluptatum veniam dicta distinctio modi cumque vitae quae!</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eius eveniet officiis aliquid in id laboriosam, ex soluta. Provident delectus id impedit fugiat et maxime ad culpa ut libero temporibus?</li>
+          <li>Licenciatura en Informática / Desarrollo Web</li>
+          <li>Certificación en UX/UI Design</li>
+          <li>Curso avanzado de JavaScript y frameworks modernos</li>
+          <li>Capacitación en metodologías ágiles y gestión de proyectos</li>
         </ul>
       </div>
     </section>
+
   </main>
-  <footer>
-    <div>
-          <a href="https://www.instagram.com/luciobauducco/"><img src="../assets/instagram.svg" alt="Instagram" class="icon"></a>
-          <a href="https://wa.me/+543493441812"><img src="../assets/whatsapp.svg" alt="WhatsApp" class="icon"></a>
-          <a href="https://www.linkedin.com/in/lucio-bauducco-2686731a8/"><img src="../assets/linkedin.svg" alt="Linkedin" class="icon"></a>
-          <a href="mailto:luciobauducco@gmail.com"><img src="../assets/email.svg" alt="Email" class="icon"></a>
+  <footer class="bg-white border-top py-4 text-center">
+    <div class="mb-3">
+      <a href="https://www.instagram.com/luciobauducco/"><img src="../assets/instagram.svg" alt="Instagram" class="icon"></a>
+      <a href="https://wa.me/+543493441812"><img src="../assets/whatsapp.svg" alt="WhatsApp" class="icon"></a>
+      <a href="https://www.linkedin.com/in/lucio-bauducco-2686731a8/"><img src="../assets/linkedin.svg" alt="Linkedin" class="icon"></a>
+      <a href="mailto:luciobauducco@gmail.com"><img src="../assets/email.svg" alt="Email" class="icon"></a>
     </div>
     <p>Email: luciobauducco@gmail.com</p>
     <p>Sunchales, Santa Fe, Argentina</p>
     <p>2025 Lucio Bauducco - Todos los derechos reservados.</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
