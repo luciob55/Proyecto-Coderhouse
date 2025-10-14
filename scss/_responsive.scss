@@ -1,0 +1,31 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@include respond("sm") {
+  .hero-title { font-size: 1.8rem; }
+}
+
+@include respond("md") {
+  .site-main { padding: $space-xl 0; }
+  .hero-title { font-size: 2.2rem; }
+}
+
+@include respond("lg") {
+  .hero-title { font-size: 2.6rem; }
+  .container { padding-left: $space-lg; padding-right: $space-lg; }
+}
+
+/* Media query helpers example para imágenes posicionadas en el layout */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-lg;
+
+  @include respond("md") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond("lg") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

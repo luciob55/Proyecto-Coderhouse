@@ -1,0 +1,57 @@
+
+@use 'sass:math';
+@use 'sass:map';
+@use 'variables' as *;
+
+
+@function breakpoint($key) {
+  @return map.get($breakpoints, $key);
+}
+
+@mixin respond($break) {
+  $val: breakpoint($break);
+  @if $val {
+    @media (min-width: $val) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$break}` no definido en $breakpoints.";
+  }
+}
+
+@mixin container-max {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width;
+  padding-left: $space-md;
+  padding-right: $space-md;
+}
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin transition($props: all, $time: 200ms, $ease: ease) {
+  transition: $props $time $ease;
+}
+
+@mixin fluid-type($min-size, $max-size, $min-vw: 320px, $max-vw: 1200px) {
+  font-size: calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw})));
+}
+
+@mixin sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

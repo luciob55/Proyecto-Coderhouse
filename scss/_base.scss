@@ -1,0 +1,58 @@
+@use 'extends' as *;
+
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $font-sans;
+  color: $color-dark;
+  background: $color-bg;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.45;
+  font-size: 16px;
+  margin: 0;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  @include transition(color 180ms);
+  &:hover { color: $color-primary-600; }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  @include container-max;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0 0 $space-sm 0;
+  font-family: $font-heading;
+  color: $color-dark;
+  line-height: 1.15;
+}
+
+p { margin: 0 0 $space-md 0; color: $color-muted; }
+
+ul, ol { padding-left: 1.25rem; margin: 0 0 $space-md 0; }
+
+figure { margin: 0; }
+
+button { font-family: inherit; }
+
+.hidden { @extend %visually-hidden; }

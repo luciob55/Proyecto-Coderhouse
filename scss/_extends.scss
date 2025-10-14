@@ -1,0 +1,18 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+%btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border-radius: $radius-sm;
+  font-weight: 600;
+  cursor: pointer;
+  @include transition();
+  text-decoration: none;
+  border: 0;
+}
+
+%visually-hidden {
+  @include sr-only();
+}

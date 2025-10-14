@@ -1,0 +1,133 @@
+
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'extends'  as *;
+
+.btn {
+  @extend %btn-base;
+  background: $color-primary;
+  color: white;
+  &:hover { transform: translateY(-2px); box-shadow: $shadow-sm; }
+  &--ghost {
+    background: transparent;
+    color: $color-primary;
+    border: 1px solid rgba(13,110,253,0.12);
+  }
+}
+
+.card {
+  background: white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  padding: $space-md;
+  @include transition(transform 200ms);
+  &:hover { transform: translateY(-6px); box-shadow: $shadow-md; }
+
+  &__title { font-size: 1.05rem; margin-bottom: $space-xs; }
+  &__body { font-size: 0.95rem; color: $color-muted; }
+  &__media { border-radius: $radius-sm; overflow: hidden; margin-bottom: $space-sm; }
+}
+
+.hero {
+  padding: $space-lg 0;
+  .hero-inner {
+    @include flex-center(column, $space-md);
+    text-align: center;
+    padding: $space-md 0;
+  }
+  .hero-title { font-size: 2rem; @include fluid-type(1.6rem, 2.6rem); }
+  .hero-sub { color: $color-muted; max-width: 720px; }
+}
+
+.navbar {
+  &-brand { font-weight: 700; }
+  &-links { list-style: none; margin: 0; padding: 0; display:flex; gap: $space-md; }
+}
+
+.form {
+  &__row { margin-bottom: $space-sm; }
+  input, textarea, select {
+    border: 1px solid rgba(15,23,36,0.08);
+    padding: $space-sm;
+    border-radius: $radius-sm;
+    width: 100%;
+    @include transition(box-shadow, 160ms);
+    &:focus { outline: none; box-shadow: 0 4px 20px rgba(13,110,253,0.08); border-color: $color-primary; }
+  }
+}
+
+.proyectos .tarjeta {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    flex-grow: 1;
+    color: #555;
+  }
+
+  a {
+    color: #007bff;
+    font-weight: 500;
+    margin-top: auto;
+    &:hover {
+      color: darken(#007bff, 10%);
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.mb-3 a{
+  display: inline-flex;
+}
+
+.redes a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.redes img {
+  width: 30px;
+  height: 30px;
+}
+
+.contacto-mapa iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+footer {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  margin-top: 40px;
+  
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
