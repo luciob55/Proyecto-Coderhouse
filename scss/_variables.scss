@@ -32,3 +32,18 @@ $breakpoints: (
   "lg": 992px,
   "xl": 1200px
 );
+$spacers: (
+  0: 0,
+  1: 8px,
+  2: 12px,
+  3: 18px,
+  4: 28px,
+  5: 40px
+);
+
+$colors: (
+  primary: #0d6efd,
+  secondary: #6c757d,
+  muted: #6b7280,
+  accent: #20c997
+);

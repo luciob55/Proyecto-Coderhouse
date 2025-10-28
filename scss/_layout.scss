@@ -58,3 +58,24 @@ footer.site-footer {
 
   .footer-col { flex: 1 1 220px; min-width: 180px; }
 }
+
+.d-inline { display: inline-block; }
+.d-block { display: block; }
+
+.flex { display: flex; }
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.hidden-sm {
+  display: none;
+}

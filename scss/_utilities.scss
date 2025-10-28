@@ -4,29 +4,31 @@ $spacers: (0: 0, 1: $space-xs, 2: $space-sm, 3: $space-md, 4: $space-lg, 5: $spa
 
 
 @each $key, $val in $spacers {
-  .m-#{$key} { margin: $val !important; }
-  .mt-#{$key} { margin-top: $val !important; }
-  .mb-#{$key} { margin-bottom: $val !important; }
-  .ml-#{$key} { margin-left: $val !important; }
-  .mr-#{$key} { margin-right: $val !important; }
+  .m-#{$key} { margin: $val ; }
+  .mt-#{$key} { margin-top: $val ; }
+  .mb-#{$key} { margin-bottom: $val ; }
+  .ml-#{$key} { margin-left: $val ; }
+  .mr-#{$key} { margin-right: $val ; }
 
-  .p-#{$key} { padding: $val !important; }
-  .pt-#{$key} { padding-top: $val !important; }
-  .pb-#{$key} { padding-bottom: $val !important; }
-  .pl-#{$key} { padding-left: $val !important; }
-  .pr-#{$key} { padding-right: $val !important; }
+  .p-#{$key} { padding: $val ; }
+  .pt-#{$key} { padding-top: $val ; }
+  .pb-#{$key} { padding-bottom: $val ; }
+  .pl-#{$key} { padding-left: $val ; }
+  .pr-#{$key} { padding-right: $val ; }
 }
 
 
 $color-map: (primary: $color-primary, secondary: $color-secondary, muted: $color-muted, accent: $color-accent);
 @each $name, $clr in $color-map {
-  .text-#{$name} { color: $clr !important; }
-  .bg-#{$name} { background-color: $clr !important; }
+  .text-#{$name} { color: $clr ; }
+  .bg-#{$name} { background-color: $clr ; }
 }
 
-.d-inline { display: inline-block !important; }
-.d-block { display: block !important; }
-.flex { display: flex !important; }
-.flex-col { display: flex; flex-direction: column !important; }
+.d-inline { display: inline-block ; }
+.d-block { display: block ; }
+.flex { display: flex ; }
+.flex-col { display: flex; flex-direction: column ; }
 .center { @include flex-center(row); }
 .hidden-sm { display: none; @include respond("md") { display: block; } }
+@include spacing-utilities(margin, m);
+@include spacing-utilities(padding, p);
